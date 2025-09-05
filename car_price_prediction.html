@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #ff9900;
+        }
+        .car-img {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .car-img img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="car-img">
+            <img src="https://img.freepik.com/free-vector/sport-car-isolated-white-vector_53876-67367.jpg" alt="Car Image">
+        </div>
+        <h2>Car Price Prediction 🚗</h2>
+
+        <form action="/pred_link" method="post">
+
+            <label>Enter Car Make (0–21):</label>
+            <input type="number" name="make_in" min="0" max="21" required>
+
+            <label>Select Fuel Type:</label>
+            <select name="fuel_in" required>
+                <option value="0">Gas</option>
+                <option value="1">Diesel</option>
+            </select>
+
+            <label>Body Style [0–4] → (convertible, hardtop, hatchback, sedan, wagon):</label>
+            <input type="number" name="body_in" min="0" max="4" required>
+
+            <label>Drive Wheels [0–2] → (4wd, fwd, rwd):</label>
+            <input type="number" name="wheel_in" min="0" max="2" required>
+
+            <label>Engine Location [0–1] → (front, rear):</label>
+            <input type="number" name="engine_in" min="0" max="1" required>
+
+            <label>Engine Type [0–6] → (dohc, dohcv, l, ohc, ohcf, ohcv, rotor):</label>
+            <input type="number" name="enginetype_in" min="0" max="6" required>
+
+            <label>Symbol (–2 to 3):</label>
+            <input type="number" name="symbol_in" min="-2" max="3" required>
+
+            <label>Normalized Loss:</label>
+            <input type="number" name="normalized_in" required>
+
+            <label>Width:</label>
+            <input type="number" step="0.1" name="width_in" required>
+
+            <label>Height:</label>
+            <input type="number" step="0.1" name="height_in" required>
+
+            <label>Engine Size:</label>
+            <input type="number" name="enginesize_in" required>
+
+            <label>Horsepower:</label>
+            <input type="number" name="horsepower_in" required>
+
+            <label>City Mileage (mpg):</label>
+            <input type="number" name="citympg_in" required>
+
+            <label>Highway Mileage (mpg):</label>
+            <input type="number" name="highwaympg_in" required>
+
+            <input type="submit" value="Check Price">
+        </form>
+    </div>
+</body>
+</html>
