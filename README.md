@@ -4,7 +4,6 @@
 The Car Price Prediction Model is a machine learning project that predicts the selling price of a car based on factors such as year, mileage, fuel type, transmission type, and engine capacity.
 This project helps buyers, sellers, and dealerships to estimate fair market values of cars.
 
-🛠️ Tech Stack
 
 🛠️ Tech Stack
 
